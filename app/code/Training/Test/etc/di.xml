@@ -16,4 +16,16 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="catalogPrice" type="Training\Test\Plugin\Price" />
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="copyright" type="Training\Test\Plugin\Copyright" />
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="copyright" type="Training\Test\Plugin\Breadcrumbs" />
+    </type>
 </config>
