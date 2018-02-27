@@ -11,32 +11,53 @@ namespace Training\Test\MagentoU;
 
 class Test
 {
+    /**
+     * @var \Magento\Catalog\Api\ProductRepositoryInterface
+     */
+    protected $productRepository;
+    /**
+     * @var \Magento\Catalog\Model\ProductFactory
+     */
+    protected $productFactory;
+    /**
+     * @var \Magento\Checkout\Model\Session
+     */
+    protected $session;
+    /**
+     * @var \Magento\Catalog\Model\ProductRepository
+     */
+    protected $trainingProductRepository;
+    /**
+     * @var bool
+     */
+    protected $justAParameter;
+    /**
+     * @var array
+     */
+    protected $data;
+
     public function __construct(
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
         \Magento\Catalog\Model\ProductFactory $productFactory,
         \Magento\Checkout\Model\Session $session,
-      //  \Training\Test\Api\ProductRepositoryInterface $trainingProductRepository, //return error
         \Magento\Catalog\Model\ProductRepository $trainingProductRepository,
         $justAParameter = false,
         array $data
     ) {
 
-        $this->_productRepository = $productRepository;
-        $this->_productFactory = $productFactory;
-        $this->_session = $session;
-        $this->_trainingProductRepository = $trainingProductRepository;
-        $this->_justAParameter = $justAParameter;
-        $this->_data = $data;
+        $this->productRepository = $productRepository;
+        $this->productFactory = $productFactory;
+        $this->session = $session;
+        $this->trainingProductRepository = $trainingProductRepository;
+        $this->justAParameter = $justAParameter;
+        $this->data = $data;
 
     }
 
     public function process() {
 
-        echo var_dump($this->_data);
+        echo var_dump($this->data);
         echo "<br>";
-        echo var_dump($this->_justAParameter);
-       // var_dump($this->_data);
-       // var_dump($this->_justAParameter);
-
+        echo var_dump($this->justAParameter);
     }
 }

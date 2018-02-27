@@ -15,13 +15,13 @@ class LogPageOutput implements ObserverInterface
     /**
      * @var null|\Psr\Log\LoggerInterface
      */
-    protected $_logger = null;
+    protected $logger = null;
     /**
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(\Psr\Log\LoggerInterface $logger)
     {
-        $this->_logger = $logger;
+        $this->logger = $logger;
     }
     /**
      *
@@ -33,6 +33,6 @@ class LogPageOutput implements ObserverInterface
     public function execute(\Magento\Framework\Event\Observer $observer) {
         $response = $observer->getEvent()->getData('response');
         $body = $response->getBody();
-        $this->_logger->addDebug("--------\n\n\n BODY \n\n\n ". $body);
+      //  $this->logger->addDebug("--------\n\n\n BODY \n\n\n ". $body);
     }
 }

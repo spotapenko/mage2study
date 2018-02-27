@@ -6,7 +6,7 @@
  * Time: 23:45
  */
 
-namespace Training\Test\Plugin;
+namespace Training\Test\Plugin\Block;
 
 
 class Breadcrumbs

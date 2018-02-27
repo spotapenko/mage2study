@@ -33,9 +33,8 @@ class FrontController extends \Magento\Framework\App\FrontController
         \Magento\Framework\App\Response\Http $response,
         \Psr\Log\LoggerInterface $logger)
     {
-        $this->_routerList = $routerList;
-        $this->response = $response;
         $this->logger = $logger;
+        parent::__construct($routerList, $response);
     }
 
     /**

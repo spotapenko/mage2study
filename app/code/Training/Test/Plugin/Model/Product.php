@@ -6,10 +6,10 @@
  * Time: 22:55
  */
 
-namespace Training\Test\Plugin;
+namespace Training\Test\Plugin\Model;
 
 
-class Price
+class Product
 {
     public function afterGetPrice(\Magento\Catalog\Model\Product $subject, $result)
     {

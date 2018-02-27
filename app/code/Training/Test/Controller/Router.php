@@ -11,12 +11,21 @@ namespace Training\Test\Controller;
 
 class Router implements \Magento\Framework\App\RouterInterface
 {
+    /**
+     * @var \Magento\Framework\App\ActionFactory
+     */
+    protected $actionFactory;
+    /**
+     * @var \Magento\Framework\App\LoggerInterface
+     */
+    protected $logger;
+
     public function __construct(
         \Magento\Framework\App\ActionFactory $actionFactory,
         \Psr\Log\LoggerInterface $logger
     ) {
         $this->actionFactory = $actionFactory;
-        $this->_logger = $logger;
+        $this->logger = $logger;
 
     }
 
@@ -24,7 +33,7 @@ class Router implements \Magento\Framework\App\RouterInterface
         $info = $request->getPathInfo();
 
         if (preg_match("%^/(.*?)-(.*?)-(.*?)$%", $info, $m)) {
-            $this->_logger->addDebug("Router for :".$info." redirect to ".sprintf("/%s/%s/%s", $m[1], $m[2], $m[3]));
+            $this->logger->addDebug("Router for :".$info." redirect to ".sprintf("/%s/%s/%s", $m[1], $m[2], $m[3]));
             $request->setPathInfo(sprintf("/%s/%s/%s", $m[1], $m[2], $m[3]));
             return $this->actionFactory->create('Magento\Framework\App\Action\Forward',
                 ['request' => $request]);

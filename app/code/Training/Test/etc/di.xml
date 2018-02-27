@@ -18,15 +18,15 @@
     </type>
 
     <type name="Magento\Catalog\Model\Product">
-        <plugin name="catalogPrice" type="Training\Test\Plugin\Price" />
+        <plugin name="catalogPrice" type="Training\Test\Plugin\Model\Product" />
     </type>
 
     <type name="Magento\Theme\Block\Html\Footer">
-        <plugin name="copyright" type="Training\Test\Plugin\Copyright" />
+        <plugin name="copyright" type="Training\Test\Plugin\Block\Copyright" />
     </type>
 
     <type name="Magento\Theme\Block\Html\Breadcrumbs">
-        <plugin name="copyright" type="Training\Test\Plugin\Breadcrumbs" />
+        <plugin name="copyright" type="Training\Test\Plugin\Block\Breadcrumbs" />
     </type>
 
     <preference for="Magento\Framework\App\FrontControllerInterface"
@@ -44,6 +44,6 @@
     </type>
 
     <type name="Magento\Catalog\Controller\Product\View">
-        <plugin name="product-view-controller-plugin" type="Training\Test\Plugin\Product\View" sortOrder="10"/>
+        <plugin name="product-view-controller-plugin" type="Training\Test\Plugin\Controller\Product\View" sortOrder="10"/>
     </type>
 </config>
