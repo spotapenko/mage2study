@@ -21,6 +21,6 @@
 
     <type name="Magento\Catalog\Block\Product\View\Description">
         <plugin name="product-view-desription-plugin"
-                type="Training\Test\Plugin\Block\View\Product" sortOrder="10"/>
+                type="Training\Test\Plugin\Block\View\ProductDescription" sortOrder="10"/>
     </type>
 </config>
