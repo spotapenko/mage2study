@@ -14,7 +14,7 @@ class Index extends \Magento\Framework\App\Action\Action {
     public function execute() {
         $layout = $this->_view->getLayout();
         $block = $layout->createBlock('Training\Test\Block\Template');
-        $block->setTemplate('test.phtml');
+        $block->setTemplate('Training_Test:test.phtml');
         $this->getResponse()->appendBody($block->toHtml());
     }
 } 
