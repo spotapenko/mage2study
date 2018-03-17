@@ -4,4 +4,7 @@
     <head>
         <title>Custom Training Render Title</title>
     </head>
+    <body>
+        <referenceBlock name="content.top.render" remove="true" />
+    </body>
 </page>
