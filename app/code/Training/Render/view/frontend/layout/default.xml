@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 
-<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
-    <referenceContainer name="content.top">
-        <block class="Training\Render\Block\Template" name="content.top.render"  template="Training_Render::block.phtml">
-            <arguments>
-                <argument name="background_color" xsi:type="string">lightskyblue</argument>
-            </arguments>
-        </block>
-    </referenceContainer>
-</layout>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.top">
+            <block class="Training\Render\Block\Template" name="content.top.render"  template="Training_Render::block.phtml">
+                <arguments>
+                    <argument name="background_color" xsi:type="string">lightskyblue</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
