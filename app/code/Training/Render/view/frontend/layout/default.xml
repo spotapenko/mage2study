@@ -9,5 +9,14 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceBlock name="top.links">
+            <block class="Training\Render\Block\ActionLink" name="render-action-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My render link</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <!-- display new item link as last -->
+        <move element="render-action-link" destination="header.links"/>
     </body>
 </page>
